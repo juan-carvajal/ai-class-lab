@@ -14,10 +14,10 @@ class TicTacToeGame():
     self.is_game_over = False
     self.winner = None
 
-  def is_over(self): # TODO: Finish this function by adding checks for a winning game (rows, columns, diagonals)
+  def is_over(self,board): # TODO: Finish this function by adding checks for a winning game (rows, columns, diagonals)
     # return self.board.count(None) == 0
-    options=[self.board.count(None) == 0,
-    self.board[0:3].count(self.board[0])==3 and self.board[0] is not None,
+    options=[board.count(None) == 0,
+    board[0:3].count(board[0])==3 and self.board[0] is not None,
     self.board[3:6].count(self.board[3])==3 and self.board[3] is not None,
     self.board[6:].count(self.board[6])==3 and self.board[6] is not None,
     self.board[0::3].count(self.board[0])==3 and self.board[0] is not None,
